@@ -27,7 +27,7 @@ config.vm.define "us2" do |us2|
       vb.cpus = 2
       vb.memory = "2048"
 end
-us2.vm.network "public_network", auto_config: false, bridge: "Ethernet Connection I219-LM"
+us2.vm.network "public_network", ip: "192.168.0.17"
 us2.vm.provision "shell", inline: <<-SHELL                    
       apt-get update
 SHELL
