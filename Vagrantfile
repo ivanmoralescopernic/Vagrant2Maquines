@@ -9,7 +9,7 @@ config.vm.define "us1" do |us1|
       vb.cpus = 2
       vb.memory = "2048"
 end
-us1.vm.network "public_network", auto_config: false, bridge: "Ethernet Connection I219-LM"
+us1.vm.network "public_network", ip: "192.168.0.11"
 us1.vm.provision "shell", inline: <<-SHELL                    
       apt-get update
       apt-get install -y apache2
